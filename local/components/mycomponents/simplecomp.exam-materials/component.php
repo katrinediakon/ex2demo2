@@ -14,7 +14,6 @@ $this->AddIncludeAreaIcon(
     array(
 
         'URL'   => 'http://bx/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=1&type=news&lang=ru&apply_filter=Y&back_url_pub=%2F',
-
         'TITLE' => "ИБ в админке",
 				"IN_PARAMS_MENU" => true, //показать в контекстном меню
     )

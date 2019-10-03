@@ -3,7 +3,7 @@
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<html lang=”<?=LANGUAGE_ID;?>>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -114,14 +114,21 @@ $APPLICATION->IncludeFile(
 );?>
 				<div class="content-block">
 					<div class="content-block-inner">
-						<h3><?=GetMessage('CFT_NEWS')?></h3>
-<?
-$APPLICATION->IncludeFile(
-	SITE_DIR."include/news.php",
-	Array(),
-	Array("MODE"=>"html")
-);
-?>
+						<h3><?=GetMessage('CFT_LANG_CANGE')?></h3>
+						<?$APPLICATION->IncludeComponent(
+	"bitrix:main.site.selector", 
+	"en_ru", 
+	array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"SITE_LIST" => array(
+			0 => "s1",
+			1 => "s2",
+		),
+		"COMPONENT_TEMPLATE" => "en_ru"
+	),
+	false
+);?>
 					</div>
 				</div>
 

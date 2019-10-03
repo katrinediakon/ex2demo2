@@ -6,6 +6,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Второй сайт", 
+		"/ekzamen-no2/s2/index.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
